@@ -11,17 +11,25 @@ public class Problem {
         int attempts = input.nextInt();
         List<String> words = new ArrayList<>();
 
-        while (attempts != 0){
+        if (attempts >= 1 && attempts <= 100){
 
-            String word = input.next();
-            words.add(abbrivation(word));
-            attempts -= 1;
+            while (attempts != 0){
 
-        }
+                String word = input.next();
+                words.add(abbrivation(word));
+                attempts -= 1;
 
-        for (int i = 0; i < words.size(); i++){
+            }
 
-            System.out.println(words.get(i));
+            for (int i = 0; i < words.size(); i++){
+
+                System.out.println(words.get(i));
+
+            }
+
+        }else {
+
+            System.out.println("Out Of Range!!");
 
         }
 
